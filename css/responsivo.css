@@ -1,0 +1,62 @@
+@media screen and (max-width: 1005px) {
+    .navbar{
+        position: relative;
+        flex: 100%;
+    }
+    .casa{
+        display: none;
+    }
+
+    #botao{
+        margin: 0;
+        width: 100%;
+        flex: 100%;
+    }
+
+    .logo{
+        margin: 0;
+        text-align: center;
+        
+    }
+    .header{
+        padding: 50px;
+    }
+
+    .headline{
+        flex: 100%;
+        margin: 5%;
+        text-align: center;
+    }
+
+    .headline p{
+        text-align: center ;
+    }
+    .img-headline{
+        flex: 100%;
+        margin: 5%;
+        text-align: center;
+    }
+    .zap{
+        display: none;
+    }
+
+    .card{
+        width: 99%;
+    }
+    .card:hover img{
+        display: none;
+    }
+    .cartao{
+        width: 100%;
+    }
+    .btn{
+        width: 40%;
+    }
+
+    .direito{
+        flex: 100%;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+}

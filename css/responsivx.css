@@ -1,0 +1,36 @@
+@media screen and (max-width: 1384px) {
+    .body{
+        margin: 0;
+        margin-right: 0%;
+    }
+    .navbar{
+      display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .headline{
+        flex: 100%;
+        text-align: center;
+    }
+    .boxtxt h1{
+        margin-top: 22%;
+    }
+
+    .boximg{
+        display: none;
+    }
+
+    .boxtxt{
+        display: flex;
+        width: 100%;
+        text-align: center;
+        flex: 100%;
+    }
+
+    .gallery-container{
+        width: 100%;
+        margin-top: 60px;
+    }
+
+}    

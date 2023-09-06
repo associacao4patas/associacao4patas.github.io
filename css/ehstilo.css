@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Iso&display=swap');
+*{
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgb(236, 213, 232) 0%, rgb(50, 112, 118) 100%);
+}
+.navbar{
+    height: 80px;
+    align-items: center;
+    display: flex; /* o display flex alinha os itens que tipo estão embaixo ou alinha de acordo com a altura o item*/
+    flex-flow: row wrap;
+}
+.menu{
+    margin-left: 3%;
+    text-align: right;
+    padding: 15px;
+    display: inline-block;
+    background-color:#FF2978;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu:hover{
+    background: #180F4A;
+    padding: 10px;
+}
+
+
+.headline{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 670px;
+}
+.boximg{
+    display: flex;
+    width: 35%;
+    height:600px;
+}
+
+.boxtxt{
+    display: flex;
+    flex-flow: row wrap;
+    width: 35%;
+}
+
+.botton{
+    color: white;
+    align-items: center;
+    text-decoration: none;
+    background:  #180F4A;
+    padding: 8px;
+    border-radius: 17px;
+}
+
+.botton:hover{
+    background: #FF2978;
+    padding: 6px;
+}
+
+
+.gallery{
+    width: 100%;
+}
+
+#galleryi{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.gallery-container{
+    align-items: center;
+    display: flex;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.gallery-item{
+    height: 200px;
+    opacity: 0;
+    position:absolute;
+    transition: all 0.3s ease-in-out;
+    width: 330px;
+    z-index: 0;
+    border-radius: 15px;
+    background-size: contain;
+}
+
+.gallery-item-1{
+    left: 15%;
+    opacity: .4;
+    transform: translateX(-50%);
+}
+
+.gallery-item-2, .gallery-item-4{
+    height: 250px;
+    opacity: 0.8;
+    width:380px;
+    z-index: 1;
+
+}
+
+.gallery-item-2{
+    left: 30%;
+    transform: translateX(-50%);
+
+}
+
+.gallery-item-3{
+    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+    height: 300px;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 430px;
+    z-index: 2;
+}
+
+.gallery-item-4{
+    left: 70%;
+    transform: translateX(-50%);
+
+}
+
+.gallery-item-5{
+    left: 85%;
+    opacity: .4;
+    transform: translateX(-50%);
+}
+
+.gallery-controls{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    height: 100px;
+}
+
+.gallery-controls button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 30px;
+    padding: 0 12px;
+    text-transform: capitalize;
+}
+.gallery-controls-button:focus{
+    outline: none;
+}
+
+.gallery-controls-previous{
+    position: relative;
+}
+
+.gallery.controls-previous::before{
+    border:solid #000;
+    border-width: 0 5px 5px 0;
+    content:'';
+    display: inline-block;
+    height: 5px;
+    left: -30px;
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    transform: rotate(135deg) translateY(-50%);
+    transition: left 0.15s ease-in-out;
+    width: 5px;
+}
+
+.gallery-controls-previous:hover::before{
+    left:-40px;
+}
+
+.gallery-controls-next{
+    position: relative;
+}
+
+.gallery-controls-next::before{
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    padding: 10px;
+    position: absolute;
+    right: -30px;
+    top: 45;
+    transform: rotate(-45deg) translateY(-50%);
+    transition: right 0.15s ease-in-out;
+    width: 5px;
+}
+
+.gallery-controls-next:hover::before{
+    right: -40px;
+}
+
+.gallery-nav{
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.gallery-nav li{
+    background: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+}
+
+.gallery-nav li.gallery-item-selected{
+    background: #555;
+
+}
+
+@keyframes load{
+    to{transform:rotate(0deg)}
+}
+.pre{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/carr.gif");
+    background-position: center;
+    background-size: cover;
+    animation: load 2s infinite linear;
+}
+
+.box-load{
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
